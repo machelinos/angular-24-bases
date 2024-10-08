@@ -1,0 +1,20 @@
+<h2>{{ name }}</h2>
+<hr />
+
+<dl>
+    <td>Name:</td>
+    <dd> {{name}} </dd>
+
+    <td>Age:</td>
+    <dd> {{ age }} </dd>
+
+    <td>Method:</td>
+    <dd>{{ getCompundName() }} </dd>
+
+    <td>Capitalized:</td>
+    <dd> {{ capitalizedName }} </dd>
+</dl>
+
+<button *ngIf="name !== 'Superman'" (click)="onClickChangeName()" class="btn btn-primary m-2">Change name</button>
+<button *ngIf="age !== 38" (click)="onClickChangeAge()" class="btn btn-primary m-2">Change age</button>
+<button *ngIf="age === 38 || name === 'Superman'" (click)="onClickReset()" class="btn btn-primary m-2">Reset</button>
