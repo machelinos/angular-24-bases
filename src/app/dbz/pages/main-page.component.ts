@@ -19,6 +19,11 @@ export class MainPageComponent {
             name: 'Vegeta',
             power: 12000
         }
-    ]
+    ];
+
+    onCharacterAdded(character: Character){
+
+        console.log({ character });
+    }
 
 }
