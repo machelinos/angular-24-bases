@@ -10,16 +10,17 @@ export class ListComponent {
   @Input()
   public characterList: Character[] = [
     {
+      id: '',
       name: 'Trunks',
       power: 10
     }
   ];
 
   @Output()
-  public characterDeleted = new EventEmitter<number>()
+  public characterDeleted = new EventEmitter<string>()
 
-  onClickDeleteCharacter(index: number){
-    this.characterDeleted.emit(index);
+  onClickDeleteCharacter(id: string){
+    this.characterDeleted.emit(id);
   }
 
 }

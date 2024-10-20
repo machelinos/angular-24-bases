@@ -3,10 +3,10 @@
 
 <div class="row">
     <div class="col">
-        <dbz-list [characterList]="DbzService.characters" (characterDeleted)="DbzService.onCharacterDeleted($event)"></dbz-list>
+        <dbz-list [characterList]="characters" (characterDeleted)="onCharacterDeleted($event)"></dbz-list>
     </div>
 
     <div class="col">
-        <dbz-add-character (characterAdded)="DbzService.onCharacterAdded($event)"></dbz-add-character>
+        <dbz-add-character (characterAdded)="onCharacterAdded($event)"></dbz-add-character>
     </div>
 </div>
